@@ -2,20 +2,31 @@
 int n = int.Parse(Console.ReadLine());
 Console.WriteLine("Input number");
 int m = int.Parse(Console.ReadLine());
-for(int i = n; i<=m; i++)
+int Sum(int n, int m)
 {
-Console.Write($"{i},");
-} */
+int sum = n;
+while(n<=m)
+{if(n == m) return m;
+else return n+Sum(n+1, m);
+}
+  return Sum(n, m);
+}
+Console.WriteLine(Sum(n, m)); */
+
+
+
 /* Console.WriteLine("Input number");
 int n = int.Parse(Console.ReadLine());
 Console.WriteLine("Input number");
 int m = int.Parse(Console.ReadLine());
-int sum = 0;
-for(int i = n; i<=m; i++)
+string result(int n, int m)
 {
-sum = sum+i;
+    if(n<=m) return  $"{n}"+ " " + result(n+1, m);
+    else return $"";
 }
-Console.Write($"{sum}"); */
+Console.WriteLine(result(n, m)); */
+
+
 /* int Akerman(int n, int m)
 {
     if (n == 0) return m + 1;
